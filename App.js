@@ -18,11 +18,21 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  constructor(props) {
+    super(props);
+    this.state = {greeting: ''};
+  }
+
+  componentDidMount() {
+    NativeModules.Greeting.getGreeting((greeting) => this.setState(prev => (
+      { greeting: greeting }
+    )))
+  }
+  
   render() {
-    NativeModules.Greeting.getGreeting((greeting) => console.log(greeting))
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>TODO!</Text>
+        <Text style={styles.welcome}>{this.state.greeting}</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     );
