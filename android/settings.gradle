@@ -1,3 +1,6 @@
 rootProject.name = 'RnAppWithKotlin'
 
+include ':greeting'
+project(':greeting').projectDir = new File(rootProject.projectDir, '../greeting/')
+
 include ':app'

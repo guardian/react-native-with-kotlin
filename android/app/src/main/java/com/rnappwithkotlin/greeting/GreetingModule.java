@@ -7,6 +7,8 @@ import com.facebook.react.bridge.ReactMethod;
 
 import javax.annotation.Nonnull;
 
+import greeting.GreetingKt;
+
 class GreetingModule extends ReactContextBaseJavaModule {
 
     public GreetingModule(@Nonnull ReactApplicationContext reactContext) {
@@ -21,6 +23,7 @@ class GreetingModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getGreeting(Callback callback) {
-        callback.invoke("Hello from Android's Greeting Module!");
+        String kotlinGreeting = GreetingKt.hello();
+        callback.invoke(kotlinGreeting);
     }
 }
