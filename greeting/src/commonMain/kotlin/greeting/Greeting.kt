@@ -4,4 +4,4 @@ expect object Platform {
     fun name(): String
 }
 
-fun hello(): String = "Running on ${Platform.name()}"
+fun hello(): String = "Hello from ${Platform.name()}!"

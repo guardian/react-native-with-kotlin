@@ -39,6 +39,7 @@
 		4F2DAC9D22C25EEE00779FE0 /* Greeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DAC9C22C25EEE00779FE0 /* Greeting.m */; };
 		4F2DAC9F22C29A4600779FE0 /* greeting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2DAC9E22C29A4600779FE0 /* greeting.framework */; };
 		4F2DACA022C29A4600779FE0 /* greeting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2DAC9E22C29A4600779FE0 /* greeting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4F2DACBD22C37B3A00779FE0 /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DACBC22C37B3A00779FE0 /* Greeting.swift */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -358,9 +359,10 @@
 		2D02E47B1E0B4A5D006451C7 /* RnAppWithKotlin-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RnAppWithKotlin-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RnAppWithKotlin-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RnAppWithKotlin-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F2DAC6E22C25E5300779FE0 /* Greeting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Greeting.h; path = RnAppWithKotlin/Greeting/Greeting.h; sourceTree = "<group>"; };
 		4F2DAC9C22C25EEE00779FE0 /* Greeting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Greeting.m; path = RnAppWithKotlin/Greeting/Greeting.m; sourceTree = "<group>"; };
 		4F2DAC9E22C29A4600779FE0 /* greeting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = greeting.framework; path = ../greeting/build/bin/ios/debugFramework/greeting.framework; sourceTree = SOURCE_ROOT; };
+		4F2DACBB22C37B3A00779FE0 /* RnAppWithKotlin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RnAppWithKotlin-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F2DACBC22C37B3A00779FE0 /* Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Greeting.swift; path = RnAppWithKotlin/Greeting/Greeting.swift; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -515,8 +517,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				4F2DAC6E22C25E5300779FE0 /* Greeting.h */,
 				4F2DAC9C22C25EEE00779FE0 /* Greeting.m */,
+				4F2DACBC22C37B3A00779FE0 /* Greeting.swift */,
 			);
 			name = RnAppWithKotlin;
 			sourceTree = "<group>";
@@ -603,6 +605,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				4F2DACBB22C37B3A00779FE0 /* RnAppWithKotlin-Bridging-Header.h */,
 				4F2DAC9E22C29A4600779FE0 /* greeting.framework */,
 				13B07FAE1A68108700A75B9A /* RnAppWithKotlin */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -724,6 +727,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1020;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1167,6 +1173,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				4F2DACBD22C37B3A00779FE0 /* Greeting.swift in Sources */,
 				4F2DAC9D22C25EEE00779FE0 /* Greeting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1219,6 +1226,7 @@
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1240,6 +1248,7 @@
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RnAppWithKotlinTests/Info.plist;
@@ -1259,6 +1268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../greeting/build/bin/ios/debugFramework";
@@ -1271,6 +1281,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RnAppWithKotlin;
+				SWIFT_OBJC_BRIDGING_HEADER = "RnAppWithKotlin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1279,6 +1292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../greeting/build/bin/ios/releaseFramework";
 				INFOPLIST_FILE = RnAppWithKotlin/Info.plist;
@@ -1290,6 +1304,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RnAppWithKotlin;
+				SWIFT_OBJC_BRIDGING_HEADER = "RnAppWithKotlin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

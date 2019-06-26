@@ -6,16 +6,10 @@
 //  Copyright © 2019 Facebook. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <greeting/greeting.h>
-#import "Greeting.h"
+#import <React/RCTBridgeModule.h>
 
-@implementation Greeting
+@interface RCT_EXTERN_MODULE(Greeting, NSObject)
 
-RCT_EXPORT_MODULE();
-
-RCT_EXPORT_METHOD(getGreeting: (RCTResponseSenderBlock)callback){
-  callback(@[[GreetingGreetingKt hello]]);
-}
+RCT_EXTERN_METHOD(getGreeting: (RCTResponseSenderBlock)callback)
 
 @end
