@@ -3,6 +3,8 @@ plugins {
 }
 repositories {
     mavenCentral()
+    mavenLocal()
+    jcenter()
 }
 
 kotlin {
@@ -18,6 +20,7 @@ kotlin {
         commonMain {
             dependencies {
                 implementation kotlin('stdlib-common')
+                implementation "com.gu:multiplatform-ophan:0.0.1"
             }
         }
         androidMain {
