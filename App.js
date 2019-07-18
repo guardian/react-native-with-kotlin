@@ -27,6 +27,7 @@ export default class App extends Component<Props> {
     NativeModules.Greeting.getGreeting((greeting) => this.setState(prev => (
       { greeting: greeting }
     )))
+    NativeModules.Greeting.sendTestEvent();
   }
   
   render() {

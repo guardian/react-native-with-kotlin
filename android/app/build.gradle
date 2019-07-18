@@ -103,7 +103,7 @@ android {
 
     defaultConfig {
         applicationId "com.rnappwithkotlin"
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 18//rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
@@ -121,6 +121,18 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+    }
+    // Manually exclude files. This is necessary to get the app to compile under the current build tools.
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/kotlinx-io.kotlin_module'
+        exclude 'META-INF/atomicfu.kotlin_module'
+        exclude 'META-INF/ktor-http.kotlin_module'
+        exclude 'META-INF/ktor-utils.kotlin_module'
+        exclude 'META-INF/kotlinx-coroutines-io.kotlin_module'
+        exclude 'META-INF/kotlinx-coroutines-core.kotlin_module'
+        exclude 'META-INF/ktor-http-cio.kotlin_module'
+        exclude 'META-INF/ktor-client-core.kotlin_module'
     }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
@@ -141,6 +153,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.2"
     implementation project(':greeting')
 }
 

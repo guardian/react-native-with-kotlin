@@ -3,8 +3,8 @@ plugins {
 }
 repositories {
     mavenCentral()
-    mavenLocal()
     jcenter()
+    maven { url 'https://dl.bintray.com/guardian/kotlin' }
 }
 
 kotlin {
@@ -20,15 +20,19 @@ kotlin {
         commonMain {
             dependencies {
                 implementation kotlin('stdlib-common')
-                implementation "com.gu:multiplatform-ophan:0.0.1"
+                api "com.gu.kotlin:multiplatform-ophan-metadata:0.0.6"
             }
         }
         androidMain {
             dependencies {
                 implementation kotlin('stdlib')
+                //api "com.gu:multiplatform-ophan-jvm:0.0.1"
             }
         }
         iosMain {
+            dependencies {
+                //api "com.gu:multiplatform-ophan-ios:0.0.1"
+            }
         }
     }
 }
