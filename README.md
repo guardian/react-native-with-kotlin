@@ -35,3 +35,14 @@ step-by-step fashion.
 1. Creating native modules that require shared Android/iOS business logic.
 2. Creating native modules using pre-existing Kotlin modules.
 3. Sharing code between fully native Android/iOS apps and React Native apps.
+
+## Random notes
+
+1. When you want to use the shared Kotlin module from the iOS code you need to add a script build phase to run this script:
+   ```
+   "$SRCROOT/../greeting/gradlew" -p "$SRCROOT/../greeting" copyFramework \
+   -Pconfiguration.build.dir="$CONFIGURATION_BUILD_DIR"          \
+   -Pkotlin.build.type="$KOTLIN_BUILD_TYPE"                      \
+   -Pkotlin.target="$KOTLIN_TARGET"
+   ```
+   and you also need to add the `.framework` using the Build Target > General > Embedded Binaries > + option.
